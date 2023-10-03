@@ -1,0 +1,21 @@
+<div class="container">
+  {{#each animals}}
+    <div class="item">
+      <h2> Nome: {{this.name}}</h2>
+      <p> <strong>Espécie:</strong> {{this.especie}}</p>
+      <p> <strong>Idade:</strong> {{this.age}}</p>
+
+      <div class="actions">
+        <a href="/animals/viewAnimal/{{this.id}}">Ver detalhes</a>
+        <a href="/animals/edit/{{this.id}}">Editar</a>
+        <form action="/animals/delete/{{this.id}}" method="POST">
+            <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  {{/each}}
+</div>

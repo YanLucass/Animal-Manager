@@ -1,0 +1,65 @@
+<form action="/animals/edit" method="POST" class="form"><h2>Editar {{animal.name}}</h2>
+
+  <input type="hidden" name="id" value="{{animal.id}}">
+  <div class="form-control">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" placeholder="Digite o nome do animal" value="{{animal.name}}"/>
+  </div>
+
+  <div class="form-control">
+    <label for="especie">Espécie:</label>
+    <input type="text" name="especie" placeholder="Digite a espécie" value="{{animal.especie}}"/>
+  </div>
+
+  <div class="form-control">
+    <label for="age">Idade</label>
+    <input type="text" name="age" placeholder="Digite a idade" value="{{animal.age}}" />
+  </div>
+
+  <button type="submit">Editar</button>
+
+</form>
+
+{{!--  Vacinas  --}}
+
+<div class="vacina-container">
+
+    <form action="/animals/vacinas/add" method="POST">
+    <input type="hidden" name="AnimalId" value="{{animal.id}}">
+     <h2>Adicionar vacinação:</h2>
+
+    <div class="form-control">
+        <label for="name">Nome da vacina</label>
+        <input type="text" placeholder="Digite o nome da vacina" name="name">
+    </div>
+
+     <div class="form-control">
+        <label for="manufacturer">Fabricante:</label>
+        <input type="text"  name="manufacturer" placeholder="Digite o fabricante">
+    </div>
+
+     <div class="form-control">
+        <label for="application">Data de aplicação:</label>
+        <input type="date" name="application">
+    </div>
+
+    <input type="submit" value="Adicionar vacina" class="inputbutton">
+</form>
+
+{{!-- Listar vacinas --}}
+
+<div class="vacina-list">
+  {{!-- O include permite fazer isso: --}}
+  {{#each animal.Vacinas}}
+
+    <div>
+      Vacina id #{{this.id}} - {{this.name}} -{{this.manufacturer}} - {{this.application}}
+      <form action="/animals/vacinas/delete" method="POST">
+        <input type="hidden" name="id" value="{{this.id}}">
+        <input type="hidden" name="AnimalId" value="{{this.AnimalId}}">
+        <input type="submit" value="remover">
+      </form>
+    </div>
+
+   {{/each}}
+</div>

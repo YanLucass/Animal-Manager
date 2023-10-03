@@ -1,0 +1,212 @@
+:root {
+    --primary-color: rgb(236, 129, 5);
+    --background-color: #fff;
+    --text-color: #000;
+    --link-color: white;
+    --border-color: #ccc;
+    --button-background-color: rgb(236, 129, 5);
+    --button-text-color: #fff;
+    --button-border-color: #bbb;
+    --success-color: rgb(27, 187, 27);
+    --error-color: red;
+  }
+  
+  * {
+    font-family: Helvetica;
+    margin: 0;
+  }
+  
+  #navbar {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.3em;
+    margin-bottom: 0.5em;
+    background: linear-gradient(to right, var(--primary-color), black);
+  }
+  
+  #navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  
+  #navbar ul li {
+    margin-left: 1em;
+  }
+  
+  #navbar ul li a {
+    font-weight: bold;
+    margin-left: 5px;
+    color: var(--link-color);
+  }
+
+  #navbar ul li a:hover {
+    padding: 6px;
+    background-color: rgb(143, 76, 13)
+  }
+  
+  body {
+    background-image: url('../imagens/f1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+
+  }
+  
+  .item h2,
+  .item p {
+    margin-bottom: 0.8em;
+  }
+  
+  .actions {
+    display: flex;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+  }
+  
+  .form-control label {
+    font-weight: bold;
+    margin-bottom: 1.3em;
+  }
+  
+  .form-control input {
+    padding: 5px;
+  }
+  
+  .form-checkbox {
+    flex-direction: row;
+  }
+  
+  .form-checkbox input {
+    margin-right: 10px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  
+  .container .item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1 1 29%;
+    max-width: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .actions a,
+  .actions input {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 15px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .details-btn {
+    border: #004085;
+    color: #004085;
+  }
+  
+  .actions .delete-btn {
+    border-color: #721c24;
+    color: #721c24;
+  }
+  
+  .vacina-container {
+    max-width: 1000px;
+    margin: 1em auto;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .vacina-container form {
+    padding: 10px;
+    background-color: #fff;
+    width: 300px;
+    margin-right: 20px;
+  }
+  
+  .vacina-list {
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: #fff;
+    flex: 1;
+    padding: 10px;
+  }
+  
+  input {
+    border-radius: 5px;
+  }
+  
+  .inputbutton {
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    padding: 5px;
+    color: var(--button-text-color);
+  }
+  
+  .result {
+    margin-top: 3px;
+  }
+  
+  .ok {
+    color: var(--success-color);
+  }
+  
+  .error {
+    color: var(--error-color);
+  }
+  
+  footer {
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .detalhes {
+    text-align: center;
+    border: 1px solid black;
+    background-color: #fff;
+  }
+
